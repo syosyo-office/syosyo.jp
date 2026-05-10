@@ -1,0 +1,30 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  background: #171717;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.88;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 3px;
+}
