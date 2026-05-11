@@ -4,8 +4,8 @@
   place-items: center;
   padding: 2rem 1.25rem;
   background:
-    radial-gradient(circle at top, rgba(217, 119, 6, 0.18), transparent 30%),
-    linear-gradient(180deg, #fffaf2 0%, #f5f1e8 52%, #efe8dc 100%);
+    radial-gradient(circle at top, rgba(38, 38, 38, 0.16), transparent 30%),
+    linear-gradient(180deg, #fafafa 0%, #f3f4f6 52%, #e5e7eb 100%);
 }
 
 .backgroundGlow {
@@ -14,7 +14,7 @@
   width: min(32rem, 55vw);
   aspect-ratio: 1;
   border-radius: 999px;
-  background: rgba(176, 113, 31, 0.12);
+  background: rgba(64, 64, 64, 0.12);
   filter: blur(54px);
   pointer-events: none;
 }
@@ -26,8 +26,8 @@
   padding: 2rem;
   border: 1px solid rgba(23, 23, 23, 0.08);
   border-radius: 2rem;
-  background: rgba(255, 252, 246, 0.92);
-  box-shadow: 0 24px 80px rgba(70, 48, 22, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 24px 80px rgba(17, 24, 39, 0.12);
   backdrop-filter: blur(14px);
 }
 
