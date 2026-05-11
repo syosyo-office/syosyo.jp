@@ -1,18 +1,21 @@
 import { signIn } from "@/auth";
-import styles from "./index.module.css";
 
-type GoogleLoginButtonProps = {
+import styles from "./authButton.module.css";
+
+type GoogleSignInButtonProps = {
   label?: string;
   redirectTo?: string;
   className?: string;
 };
 
-export default function GoogleLoginButton({
+export default function GoogleSignInButton({
   label = "Googleでログイン",
   redirectTo = "/mypage",
   className,
-}: GoogleLoginButtonProps) {
-  const buttonClassName = [styles.button, className].filter(Boolean).join(" ");
+}: GoogleSignInButtonProps) {
+  const buttonClassName = [styles.button, styles.filled, className]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <form

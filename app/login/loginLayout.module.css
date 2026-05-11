@@ -1,0 +1,43 @@
+.shell {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+  background:
+    radial-gradient(circle at top, rgba(217, 119, 6, 0.18), transparent 30%),
+    linear-gradient(180deg, #fffaf2 0%, #f5f1e8 52%, #efe8dc 100%);
+}
+
+.backgroundGlow {
+  position: fixed;
+  inset: auto auto 10% 8%;
+  width: min(32rem, 55vw);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: rgba(176, 113, 31, 0.12);
+  filter: blur(54px);
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 32rem);
+  padding: 2rem;
+  border: 1px solid rgba(23, 23, 23, 0.08);
+  border-radius: 2rem;
+  background: rgba(255, 252, 246, 0.92);
+  box-shadow: 0 24px 80px rgba(70, 48, 22, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+@media (max-width: 640px) {
+  .shell {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+}
