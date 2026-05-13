@@ -1,5 +1,9 @@
 import { signIn } from "@/auth";
 
+import {
+  defaultLoginRedirectPath,
+  type OAuthProviderId,
+} from "./authProvider";
 import styles from "./authButton.module.css";
 
 type GoogleSignInButtonProps = {
@@ -10,9 +14,10 @@ type GoogleSignInButtonProps = {
 
 export default function GoogleSignInButton({
   label = "Googleでログイン",
-  redirectTo = "/mypage",
+  redirectTo = defaultLoginRedirectPath,
   className,
 }: GoogleSignInButtonProps) {
+  const provider: OAuthProviderId = "google";
   const buttonClassName = [styles.button, styles.filled, className]
     .filter(Boolean)
     .join(" ");
@@ -22,7 +27,7 @@ export default function GoogleSignInButton({
       action={async () => {
         "use server";
         await signIn(
-          "google",
+          provider,
           {
             redirectTo,
           },

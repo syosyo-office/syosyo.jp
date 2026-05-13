@@ -2,17 +2,17 @@ import type { ComponentProps } from "react";
 
 import AuthLinkButton from "./AuthLinkButton";
 
-type EmailLoginLinkProps = {
+type AppleLoginLinkProps = {
   label?: string;
   href?: ComponentProps<typeof AuthLinkButton>["href"];
   className?: string;
 };
 
-export default function EmailLoginLink({
-  label = "メールアドレスでログイン",
-  href = "/login/email",
+export default function AppleLoginLink({
+  label = "Appleでログイン",
+  href = "/login/apple",
   className,
-}: EmailLoginLinkProps) {
+}: AppleLoginLinkProps) {
   return (
     <AuthLinkButton href={href} className={className}>
       {label}

@@ -5,7 +5,7 @@ export default function Home() {
     <div className={styles.page}>
       <Header />
       <main className={styles.main}>
-        <span className={styles.subtitle}>私だけの文章。</span>
+        <span className={styles.subtitle}>私の物語へ</span>
         <h1 className={styles.title}>しょしょへようこそ</h1>
 
       </main>
