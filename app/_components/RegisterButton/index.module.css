@@ -6,8 +6,8 @@
   border: 0;
   border-radius: 8px;
   padding: 0.65rem 1.15rem;
-  background: #fff;
-  color: #363636;
+  background: #363636;
+  color: #ffffff;
   border: 2px solid #363636;
   font: inherit;
   font-weight: 700;
@@ -27,6 +27,6 @@
 }
 
 .button:focus-visible {
-  outline: 2px solid #363636;
+  outline: 2px solid #171717;
   outline-offset: 3px;
 }
