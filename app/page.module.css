@@ -27,7 +27,7 @@
 .eyebrow {
   margin-bottom: 28px;
   color: #6b6b6b;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
@@ -123,35 +123,35 @@
 
   .eyebrow {
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .title {
-    margin-bottom: 32px;
-    font-size: 34px;
+    margin-bottom: 42px;
+    font-size: 24px;
     line-height: 1.2;
   }
 
   .searchRow {
-    gap: 12px;
-    --search-box-size: 64px;
+    gap: 8px;
+    --search-box-size: 54px;
   }
 
   .searchField {
-    padding: 0 20px;
-    border-radius: 22px;
+    padding: 0 16px;
+    border-radius: 18px;
   }
 
   .searchText {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .barcodeButton {
-    border-radius: 22px;
+    border-radius: 18px;
   }
 
   .iconImage {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
   }
 }
