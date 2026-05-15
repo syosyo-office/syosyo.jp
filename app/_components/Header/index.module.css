@@ -73,7 +73,7 @@
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .actions {
@@ -109,30 +109,31 @@
   }
 
   .logo {
-    width: 42px;
-    height: 42px;
+    width: 30px;
+    height: 30px;
   }
 
   .title {
-    font-size: 1.125rem;
+    font-size: 0.9rem;
   }
 
   .loginButton,
   .registerButton {
-    min-width: 4.9rem;
-    min-height: 2.75rem;
-    padding: 0.5rem 0.8rem;
-    border-radius: 0.875rem;
-    font-size: 0.95rem;
+    min-width: 4rem;
+    min-height: 2rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+    border: 0.9px solid #363636;
+    font-size: 0.65rem;
   }
 
   .searchButton {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2rem;
+    height: 2rem;
   }
 
   .searchImage {
-    width: 1.65rem;
-    height: 1.65rem;
+    width: 1rem;
+    height: 1rem;
   }
 }
