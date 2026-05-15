@@ -1,0 +1,60 @@
+.page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+  background:
+    radial-gradient(circle at top, rgba(38, 38, 38, 0.16), transparent 30%),
+    linear-gradient(180deg, #fafafa 0%, #f3f4f6 52%, #e5e7eb 100%);
+}
+
+.card {
+  width: min(100%, 32rem);
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(23, 23, 23, 0.08);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 24px 80px rgba(17, 24, 39, 0.12);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #525252;
+}
+
+.title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #1c1917;
+}
+
+.lead {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #525252;
+}
+
+.footer {
+  padding-top: 0.25rem;
+}
+
+.backLink {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #71717a;
+}
+
+.backLink:hover {
+  color: #18181b;
+}
+
+.backLink:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 3px;
+}

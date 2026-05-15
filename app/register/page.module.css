@@ -1,0 +1,181 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.main {
+  width: min(100%, 52rem);
+  padding: 6rem 1.75rem 3rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.75rem;
+}
+
+.title {
+  font-size:36px;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.authorLink {
+  padding-bottom: 0.35rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--foreground);
+  text-underline-offset: 0.3em;
+}
+.authorLink:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  display: grid;
+  gap: 1rem;
+}
+
+.primaryButton,
+.secondaryButton,
+.oauthButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  min-height: 5rem;
+  padding: 0 1.2rem;
+  border-radius: 1.05rem;
+  font: inherit;
+  font-size: clamp(0.94rem, 2.45vw, 1.2rem);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primaryButton {
+  border: 1px solid var(--foreground);
+  background: var(--foreground);
+  color: var(--background)
+}
+
+.secondaryButton,
+.oauthButton {
+  border: 1px solid var(--foreground);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.googleButton {
+  appearance: none;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover,
+.oauthButton:hover {
+  opacity: 0.94;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+}
+
+.primaryButton:active,
+.secondaryButton:active,
+.oauthButton:active {
+  transform: translateY(1px);
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible,
+.oauthButton:focus-visible,
+.authorLink:focus-visible,
+.loginLink:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 3px;
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.divider {
+  height: 1px;
+  margin: 3rem 0 2.25rem;
+  background: #B9B9B9;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.loginLink {
+  font-size: 0.98rem;
+  color: #5D5D5D;
+  text-underline-offset: 0.3em;
+}
+.loginLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 9rem 1.25rem 2.5rem;
+  }
+
+  .header {
+    align-items: center;
+    margin-bottom: 2.1rem;
+  }
+  .title{
+    font-size: 24px;
+  }
+
+  .primaryButton,
+  .secondaryButton,
+  .oauthButton {
+    min-height: 2.95rem;
+    padding: 0 0.8rem;
+    border-radius: 0.72rem;
+    gap: 0.5rem;
+    font-size: 0.84rem;
+  }
+
+  .iconWrap {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .authorLink,
+  .loginLink {
+    font-size: 0.88rem;
+  }
+
+  .divider {
+    margin: 2.2rem 0 1.9rem;
+  }
+}

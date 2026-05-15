@@ -1,35 +1,85 @@
-import { registerUser } from "./actions";
+import Image from "next/image";
+import Link from "next/link";
+
+import { signIn } from "@/auth";
+import styles from "./page.module.css";
 
 export default function RegisterPage() {
   return (
-    <main>
-      <h1>新規登録</h1>
+    <main className={styles.page}>
+      <div className={styles.main}>
+        <header className={styles.header}>
+          <h1 className={styles.title}>会員登録</h1>
+          <Link href="/register/author" className={styles.authorLink}>
+            作家の方
+          </Link>
+        </header>
 
-      <form action={registerUser}>
-        <input
-          type="text"
-          name="name"
-          placeholder="名前"
-        />
+        <div className={styles.actions}>
+          <Link href="/register/phone" className={styles.primaryButton}>
+            <span className={styles.iconWrap} aria-hidden="true">
+              <Image
+                src="/phone-icon.svg"
+                alt=""
+                width={40}
+                height={40}
+                className={styles.icon}
+              />
+            </span>
+            <span>電話番号で登録</span>
+          </Link>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="メールアドレス"
-          required
-        />
+          <Link href="/register/email" className={styles.secondaryButton}>
+            <span className={styles.iconWrap} aria-hidden="true">
+              <Image
+                src="/mail-icon.svg"
+                alt=""
+                width={40}
+                height={40}
+                className={styles.icon}
+              />
+            </span>
+            <span>メールで登録</span>
+          </Link>
 
-        <input
-          type="password"
-          name="password"
-          placeholder="パスワード"
-          required
-        />
+          <form
+            action={async () => {
+              "use server";
+              await signIn(
+                "google",
+                {
+                  redirectTo: "/mypage",
+                },
+                {
+                  prompt: "select_account",
+                }
+              );
+            }}
+            className={styles.googleButton}
+          >
+            <button type="submit" className={styles.oauthButton}>
+              <span className={styles.iconWrap} aria-hidden="true">
+                <Image
+                  src="/google-icon.svg"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.icon}
+                />
+              </span>
+              <span>Googleで登録</span>
+            </button>
+          </form>
+        </div>
 
-        <button type="submit">
-          登録する
-        </button>
-      </form>
+        <div className={styles.divider} aria-hidden="true" />
+
+        <footer className={styles.footer}>
+          <Link href="/login" className={styles.loginLink}>
+            ログインはこちら
+          </Link>
+        </footer>
+      </div>
     </main>
   );
 }

@@ -1,0 +1,96 @@
+.page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+  background:
+    radial-gradient(circle at top, rgba(38, 38, 38, 0.16), transparent 30%),
+    linear-gradient(180deg, #fafafa 0%, #f3f4f6 52%, #e5e7eb 100%);
+}
+
+.card {
+  width: min(100%, 34rem);
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(23, 23, 23, 0.08);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 24px 80px rgba(17, 24, 39, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #525252;
+}
+
+.title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #1c1917;
+}
+
+.lead {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #525252;
+}
+
+.panel {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 1rem;
+  background: rgba(245, 245, 245, 0.88);
+}
+
+.panelTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #18181b;
+}
+
+.steps {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1.1rem;
+  color: #3f3f46;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.actions {
+  padding-top: 0.25rem;
+}
+
+.backLink {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #71717a;
+}
+
+.backLink:hover {
+  color: #18181b;
+}
+
+.backLink:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+}
