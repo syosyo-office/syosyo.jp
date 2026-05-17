@@ -2,19 +2,19 @@
   min-height: 100dvh;
   display: grid;
   place-items: center;
-  padding: 2rem 1.25rem;
+  padding: 1rem;
   background:
     radial-gradient(circle at top, rgba(38, 38, 38, 0.16), transparent 30%),
     linear-gradient(180deg, #fafafa 0%, #f3f4f6 52%, #e5e7eb 100%);
 }
 
 .card {
-  width: min(100%, 34rem);
+  width: 100%;
   display: grid;
   gap: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   border: 1px solid rgba(23, 23, 23, 0.08);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 24px 80px rgba(17, 24, 39, 0.12);
   backdrop-filter: blur(14px);
@@ -82,15 +82,4 @@
 .backLink:focus-visible {
   outline: 2px solid #171717;
   outline-offset: 3px;
-}
-
-@media (max-width: 640px) {
-  .page {
-    padding: 1rem;
-  }
-
-  .card {
-    padding: 1.5rem;
-    border-radius: 1.5rem;
-  }
 }

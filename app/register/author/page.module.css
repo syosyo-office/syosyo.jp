@@ -9,7 +9,7 @@
 }
 
 .card {
-  width: min(100%, 32rem);
+  width: 100%;
   display: grid;
   gap: 1rem;
   padding: 2rem;
