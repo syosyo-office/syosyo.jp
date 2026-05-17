@@ -180,6 +180,10 @@
     box-shadow 0.2s ease;
 }
 
+.submitButtonEnabled {
+  background: #3d3d3d;
+}
+
 .submitButton:hover {
   opacity: 0.94;
   box-shadow: 0 14px 24px rgba(0, 0, 0, 0.08);

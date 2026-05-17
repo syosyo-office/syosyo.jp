@@ -1,17 +1,22 @@
 "use client";
 
 import { useId, useState } from "react";
+import type { ChangeEventHandler } from "react";
 
 type PasswordFieldProps = {
   className?: string;
   inputClassName?: string;
   toggleClassName?: string;
+  value?: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 };
 
 export default function PasswordField({
   className,
   inputClassName,
   toggleClassName,
+  value,
+  onChange,
 }: PasswordFieldProps) {
   const [isVisible, setIsVisible] = useState(false);
   const inputId = useId();
@@ -25,6 +30,8 @@ export default function PasswordField({
         name="password"
         placeholder="8文字以上の半角英数記号"
         autoComplete="current-password"
+        value={value}
+        onChange={onChange}
         required
       />
 

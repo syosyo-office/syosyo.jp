@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import wideButtonStyles from "@/app/_components/wideButton.module.css";
-import PasswordField from "./_components/PasswordField";
+import LoginForm from "./_components/LoginForm";
 import { loginWithCredentials, loginWithGoogle } from "./actions";
 import styles from "./page.module.css";
 
@@ -22,15 +21,6 @@ function resolveErrorMessage(error: string | string[] | undefined) {
 export default async function LoginPage(props: PageProps<"/login">) {
   const { error } = await props.searchParams;
   const errorMessage = resolveErrorMessage(error);
-  const inputClassName = [styles.input, wideButtonStyles.wideButton]
-    .filter(Boolean)
-    .join(" ");
-  const passwordInputClassName = [styles.passwordInput, wideButtonStyles.wideButton]
-    .filter(Boolean)
-    .join(" ");
-  const submitButtonClassName = [styles.submitButton, wideButtonStyles.wideButton]
-    .filter(Boolean)
-    .join(" ");
 
   return (
     <main className={styles.page}>
@@ -63,34 +53,7 @@ export default async function LoginPage(props: PageProps<"/login">) {
           </form>
         </div>
 
-        <form action={loginWithCredentials} className={styles.form}>
-          <input
-            className={inputClassName}
-            type="email"
-            name="email"
-            placeholder="mail@example.com"
-            autoComplete="email"
-            required
-          />
-
-          <PasswordField
-            className={styles.passwordField}
-            inputClassName={passwordInputClassName}
-            toggleClassName={styles.passwordToggle}
-          />
-
-          {errorMessage && <p className={styles.error}>{errorMessage}</p>}
-
-          <div className={styles.helpLinks} aria-label="ログインサポート">
-            <span className={styles.helpText}>パスワードを忘れた方</span>
-            <span className={styles.helpDivider}>/</span>
-            <span className={styles.helpText}>ログインでお困りの方</span>
-          </div>
-
-          <button type="submit" className={submitButtonClassName}>
-            ログイン
-          </button>
-        </form>
+        <LoginForm action={loginWithCredentials} errorMessage={errorMessage} />
 
         <div className={styles.divider} aria-hidden="true" />
 
