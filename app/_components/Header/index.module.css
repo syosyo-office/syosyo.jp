@@ -47,7 +47,7 @@
   font-size: var(--size-10);
 }
 
-.searchButton {
+.iconButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +59,52 @@
 }
 
 .searchImage {
-  width: var(--size-16);
-  height: var(--size-16);
+  width: var(--size-20);
+  height: var(--size-20);
   object-fit: contain;
+}
+
+.notificationIcon {
+  position: relative;
+  display: inline-flex;
+}
+
+.notificationDot {
+  position: absolute;
+  top: 3px;
+  right: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #ff6a5f;
+}
+
+.profileLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+.profileFallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: #f1efe9;
+  color: #363636;
+  font-size: 14px;
+  font-weight: 700;
 }

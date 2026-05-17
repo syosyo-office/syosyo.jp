@@ -8,9 +8,6 @@ export default async function MyPage() {
   if (!session?.user) {
     redirect("/login");
   }
-
-  console.log(session.user);
-
   return (
     <main>
       <h1>マイページ</h1>
