@@ -9,7 +9,6 @@ export default function LoginLayout({
 }>) {
   return (
     <div className={styles.shell}>
-      <div className={styles.backgroundGlow} />
       <main className={styles.card}>{children}</main>
     </div>
   );

@@ -31,7 +31,7 @@
 }
 
 .text {
-  font-size: 16px;
+  font-size: var(--size-16);
   font-weight: 600;
   letter-spacing: 0.08em;
   color: #333;

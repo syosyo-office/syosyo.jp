@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import wideButtonStyles from "@/app/_components/wideButton.module.css";
 import { loginWithEmail } from "./actions";
 import styles from "./page.module.css";
 
@@ -21,6 +22,12 @@ export default async function EmailLoginPage(
 ) {
   const { error } = await props.searchParams;
   const errorMessage = resolveErrorMessage(error);
+  const inputClassName = [styles.input, wideButtonStyles.wideButton]
+    .filter(Boolean)
+    .join(" ");
+  const submitButtonClassName = [styles.submitButton, wideButtonStyles.wideButton]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <div className={styles.stack}>
@@ -34,7 +41,7 @@ export default async function EmailLoginPage(
 
       <form action={loginWithEmail} className={styles.form}>
         <input
-          className={styles.input}
+          className={inputClassName}
           type="email"
           name="email"
           placeholder="メールアドレス"
@@ -42,14 +49,14 @@ export default async function EmailLoginPage(
         />
 
         <input
-          className={styles.input}
+          className={inputClassName}
           type="password"
           name="password"
           placeholder="パスワード"
           required
         />
 
-        <button type="submit" className={styles.submitButton}>
+        <button type="submit" className={submitButtonClassName}>
           ログインする
         </button>
       </form>

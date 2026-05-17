@@ -1,10 +1,10 @@
 .stack {
   display: grid;
-  gap: 1rem;
+  gap: var(--size-16);
 }
 
 .eyebrow {
-  font-size: 0.75rem;
+  font-size: var(--size-12);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -12,58 +12,58 @@
 }
 
 .title {
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-size: var(--size-32);
   line-height: 1.05;
   letter-spacing: -0.04em;
   color: #1c1917;
 }
 
 .lead {
-  font-size: 0.95rem;
+  font-size: var(--size-14);
   line-height: 1.7;
   color: #525252;
 }
 
 .panel {
   display: grid;
-  gap: 0.7rem;
-  padding: 1rem;
+  gap: 11px;
+  padding: var(--size-16);
   border: 1px solid #d4d4d8;
-  border-radius: 1rem;
+  border-radius: var(--size-16);
   background: rgba(245, 245, 245, 0.88);
 }
 
 .panelTitle {
-  font-size: 0.95rem;
+  font-size: var(--size-14);
   font-weight: 700;
   color: #18181b;
 }
 
 .steps {
   display: grid;
-  gap: 0.45rem;
-  padding-left: 1.1rem;
+  gap: 7px;
+  padding-left: 18px;
   color: #3f3f46;
-  font-size: 0.92rem;
+  font-size: var(--size-14);
   line-height: 1.6;
 }
 
 .note {
-  padding: 0.85rem 1rem;
+  padding: var(--size-14) var(--size-16);
   border: 1px solid #d4d4d8;
-  border-radius: 1rem;
+  border-radius: var(--size-16);
   background: #f5f5f5;
   color: #27272a;
-  font-size: 0.92rem;
+  font-size: var(--size-14);
   line-height: 1.6;
 }
 
 .footer {
-  padding-top: 0.25rem;
+  padding-top: 4px;
 }
 
 .backLink {
-  font-size: 0.92rem;
+  font-size: var(--size-14);
   font-weight: 600;
   color: #71717a;
 }

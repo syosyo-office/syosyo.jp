@@ -1,10 +1,10 @@
 .stack {
   display: grid;
-  gap: 1rem;
+  gap: var(--size-16);
 }
 
 .eyebrow {
-  font-size: 0.75rem;
+  font-size: var(--size-12);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -12,44 +12,47 @@
 }
 
 .title {
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-size: var(--size-32);
   line-height: 1.05;
   letter-spacing: -0.04em;
   color: #1c1917;
 }
 
 .lead {
-  font-size: 0.95rem;
+  font-size: var(--size-14);
   line-height: 1.7;
   color: #525252;
 }
 
 .error {
-  padding: 0.85rem 1rem;
+  padding: var(--size-14) var(--size-16);
   border: 1px solid #d4d4d8;
-  border-radius: 1rem;
+  border-radius: var(--size-16);
   background: #f5f5f5;
   color: #27272a;
-  font-size: 0.92rem;
+  font-size: var(--size-14);
 }
 
 .form {
   display: grid;
-  gap: 0.9rem;
+  gap: var(--size-14);
 }
 
 .input {
   width: 100%;
-  padding: 0.95rem 1rem;
   border: 1px solid #d4d4d8;
-  border-radius: 1rem;
   background: rgba(255, 255, 255, 0.95);
   color: #1c1917;
   font: inherit;
+  line-height: 1.4;
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease,
     transform 0.2s ease;
+}
+
+.input {
+  padding-inline: var(--size-16);
 }
 
 .input::placeholder {
@@ -65,8 +68,6 @@
 .submitButton {
   appearance: none;
   border: 0;
-  border-radius: 999px;
-  padding: 0.95rem 1.25rem;
   background: linear-gradient(135deg, #1c1917 0%, #44403c 100%);
   color: #ffffff;
   font: inherit;
@@ -94,11 +95,11 @@
 }
 
 .footer {
-  padding-top: 0.25rem;
+  padding-top: 4px;
 }
 
 .backLink {
-  font-size: 0.92rem;
+  font-size: var(--size-14);
   font-weight: 600;
   color: #71717a;
 }

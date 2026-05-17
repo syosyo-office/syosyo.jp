@@ -1,0 +1,6 @@
+.wideButton {
+  min-height: 47px;
+  padding: 0 13px;
+  border-radius: var(--size-12);
+  font-size: var(--size-14);
+}

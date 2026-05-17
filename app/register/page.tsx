@@ -2,9 +2,29 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { signIn } from "@/auth";
+import wideButtonStyles from "@/app/_components/wideButton.module.css";
 import styles from "./page.module.css";
 
 export default function RegisterPage() {
+  const primaryButtonClassName = [
+    styles.primaryButton, 
+    wideButtonStyles.wideButton
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const secondaryButtonClassName = [
+    styles.secondaryButton,
+    wideButtonStyles.wideButton,
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const oauthButtonClassName = [
+    styles.oauthButton, 
+    wideButtonStyles.wideButton
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <main className={styles.page}>
       <div className={styles.main}>
@@ -16,7 +36,7 @@ export default function RegisterPage() {
         </header>
 
         <div className={styles.actions}>
-          <Link href="/register/phone" className={styles.primaryButton}>
+          <Link href="/register/phone" className={primaryButtonClassName}>
             <span className={styles.iconWrap} aria-hidden="true">
               <Image
                 src="/phone-icon.svg"
@@ -29,7 +49,7 @@ export default function RegisterPage() {
             <span>電話番号で登録</span>
           </Link>
 
-          <Link href="/register/email" className={styles.secondaryButton}>
+          <Link href="/register/email" className={secondaryButtonClassName}>
             <span className={styles.iconWrap} aria-hidden="true">
               <Image
                 src="/mail-icon.svg"
@@ -57,7 +77,7 @@ export default function RegisterPage() {
             }}
             className={styles.googleButton}
           >
-            <button type="submit" className={styles.oauthButton}>
+            <button type="submit" className={oauthButtonClassName}>
               <span className={styles.iconWrap} aria-hidden="true">
                 <Image
                   src="/google-icon.svg"
